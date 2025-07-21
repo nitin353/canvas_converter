@@ -138,7 +138,7 @@ This project is licensed under the **MIT License** — free to use, modify, and 
 ## 🔗 Links
 
 - 🔥 **Live Demo Video**: [YouTube](https://youtu.be/vPlO17Bqi_E)
-- 📁 **GitHub Repo**: [https://github.com/yourusername/canvasjs-converter](https://github.com/yourusername/canvasjs-converter)
+- 📁 **GitHub Repo**: [https://github.com/nitin353/canvas_converter.git](https://github.com/nitin353/canvas_converter.git)
 - 📚 **Docs & Tutorial**: *(coming soon)*
 
 ---
