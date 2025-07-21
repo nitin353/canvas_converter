@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canvas.js Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #previewCanvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin-bottom: 10px;
+    }
+    #codeBox {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    button {
+      padding: 8px 12px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🖼️ Canvas.js Converter</h2>
+  <p>Select a PNG, JPG, PDF, or SVG file (including from Figma exports)</p>
+  
+  <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf,.svg" />
+  
+  <canvas id="previewCanvas" width="800" height="600"></canvas>
+  
+  <h4>🧾 Canvas.js Code</h4>
+  <textarea id="codeBox" readonly></textarea>
+  <br/>
+  <button onclick="copyCode()">📋 Copy Code</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
