@@ -4,41 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Canvas.js Converter</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #previewCanvas {
-      border: 1px solid #ccc;
-      display: block;
-      margin-bottom: 10px;
-    }
-    #codeBox {
-      width: 100%;
-      height: 200px;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-    button {
-      padding: 8px 12px;
-      margin-top: 8px;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center p-4 
+             bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
 
-  <h2>🖼️ Canvas.js Converter</h2>
-  <p>Select a PNG, JPG, PDF, or SVG file (including from Figma exports)</p>
-  
-  <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf,.svg" />
-  
-  <canvas id="previewCanvas" width="800" height="600"></canvas>
-  
-  <h4>🧾 Canvas.js Code</h4>
-  <textarea id="codeBox" readonly></textarea>
-  <br/>
-  <button onclick="copyCode()">📋 Copy Code</button>
+  <!-- Lighter Gradient Card -->
+  <div class="rounded-2xl p-6 sm:p-8 w-full max-w-3xl shadow-xl 
+              bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 
+              border border-purple-300">
+    
+    <!-- Title -->
+    <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">🖼️ Canvas.js Converter</h2>
+    <p class="text-purple-100 text-sm sm:text-base mb-6">
+      Upload a PNG, JPG, PDF, or SVG file (including Figma exports) to generate Canvas.js code.
+    </p>
+    
+    <!-- File Upload -->
+    <label class="block">
+      <input 
+        type="file" 
+        id="fileInput" 
+        accept=".png,.jpg,.jpeg,.pdf,.svg" 
+        class="block w-full text-sm text-gray-800 border border-purple-300 rounded-lg cursor-pointer 
+               bg-purple-100 hover:bg-purple-200 transition focus:outline-none focus:ring-2 focus:ring-pink-300"
+      />
+    </label>
+
+    <!-- Canvas Preview -->
+    <div class="mt-6 overflow-x-auto">
+      <canvas id="previewCanvas" 
+              width="800" height="600" 
+              class="border border-purple-300 rounded-lg shadow-md w-full max-w-full bg-white"></canvas>
+    </div>
+
+    <!-- Code Output -->
+    <div class="mt-8">
+      <h4 class="text-lg font-semibold text-white mb-2">🧾 Canvas.js Code</h4>
+      <textarea 
+        id="codeBox" 
+        readonly 
+        class="w-full h-40 sm:h-48 p-3 border border-purple-300 rounded-lg font-mono text-xs sm:text-sm 
+               bg-white/90 text-gray-900 focus:ring-2 focus:ring-pink-300 resize-none"
+      ></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-4 flex justify-end">
+      <button 
+        onclick="copyCode()" 
+        class="bg-pink-500 hover:bg-pink-600 text-white font-medium px-4 sm:px-5 py-2 rounded-lg shadow-md transition">
+        📋 Copy Code
+      </button>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="script.js"></script>
